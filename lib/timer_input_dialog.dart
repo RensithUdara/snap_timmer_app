@@ -28,23 +28,25 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
   Widget build(BuildContext context) {
     return Dialog(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(16), // Rounded corners to match the style
       ),
+      backgroundColor: Colors.white, // Keep dialog clean with white background
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // Title with consistent style
             const Text(
               "Set Timer",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
-                color: Colors.black87,
+                color: Colors.deepPurple, // Use deep purple for text consistency
               ),
             ),
             const SizedBox(height: 20),
+            // Input fields in a row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -63,6 +65,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
               ],
             ),
             const SizedBox(height: 24),
+            // Set Timer & Cancel buttons
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -72,7 +75,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
                         horizontal: 32, vertical: 12),
                     backgroundColor: Colors.deepPurpleAccent,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(30), // Rounded to match other button styles
                     ),
                   ),
                   onPressed: () {
@@ -96,7 +99,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 32, vertical: 12),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                   onPressed: () {
@@ -104,7 +107,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
                   },
                   child: const Text(
                     "Cancel",
-                    style: TextStyle(fontSize: 16, color: Colors.grey),
+                    style: TextStyle(fontSize: 16, color: Colors.deepPurple),
                   ),
                 ),
               ],
@@ -124,7 +127,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
       children: [
         Text(
           label,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.deepPurple),
         ),
         const SizedBox(height: 8),
         SizedBox(
@@ -134,12 +137,19 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
             keyboardType: TextInputType.number,
             decoration: InputDecoration(
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(10),
               ),
+              filled: true,
+              fillColor: Colors.deepPurpleAccent.withOpacity(0.05), // Light fill to keep focus on text
               isDense: true,
               contentPadding: const EdgeInsets.all(8),
             ),
             textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.deepPurpleAccent,
+            ),
           ),
         ),
       ],
