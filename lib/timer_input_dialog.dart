@@ -140,7 +140,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
                 borderRadius: BorderRadius.circular(10),
               ),
               filled: true,
-              fillColor: Colors.deepPurpleAccent.withOpacity(0.05), // Light fill to keep focus on text
+              fillColor: Colors.deepPurpleAccent.withOpacity(0.06), // Light fill to keep focus on text
               isDense: true,
               contentPadding: const EdgeInsets.all(8),
             ),
