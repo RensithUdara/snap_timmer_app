@@ -129,7 +129,7 @@ class _TimerInputDialogState extends State<TimerInputDialog> {
           label,
           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.deepPurple),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 10),
         SizedBox(
           width: 60,
           child: TextField(
